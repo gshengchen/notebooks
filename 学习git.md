@@ -241,5 +241,14 @@ git diff --staged //查看哪些已暂存的内容会进入下一次提交
 ~~~ code
 
 git rm <filename>
-
+git rm -f <filename>
 ~~~
+
+如果用删除了工作目录的文件，一样可以用git rm 从git删除。
+如果想把文件保留在工作目录，但从暂存区删除该文件，使用--cached选项
+
+~~~ code
+
+git rm --cached <filename>
+~~~
+
