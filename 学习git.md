@@ -249,6 +249,18 @@ git rm -f <filename>
 
 ~~~ code
 
-git rm --cached <filename>
+git rm --cached <filename> //可以用glob模式匹配
 ~~~
 
+* 移动文件
+
+git 如果使用mv 命令，其实是一个重命名命令。
+
+~~~ code
+git mv file-from file-to
+// 相当于执行以下三条命令
+mv file-from file-to
+git rm file-from
+git add file-to
+
+~~~
